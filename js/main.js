@@ -1,6 +1,12 @@
 let elOrder = document.querySelector('.order')
 let localLong = window.localStorage.getItem('local')
-let str = `lan${localLong}`
+if(localLong == 'UZ'||localLong == 'EN'|| localLong == 'RU'){
+    str = `lan${localLong}`
+
+}
+else{
+    str = "lanUZ"
+}
 
 
 elOrder.innerHTML = ` <div class="box">
@@ -125,7 +131,7 @@ elSelect.addEventListener('change', (e) => {
         Sel4.classList.add('btn')
         }
     
-        else{
+    else{
             Sel1.textContent = Data.navbar[0].lanUZ
             Sel2.textContent = Data.navbar[1].lanUZ
             Sel3.textContent = Data.navbar[2].lanUZ
